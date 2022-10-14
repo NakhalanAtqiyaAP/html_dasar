@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grid</title>
+        <style type="text/css">
+            .container {
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 150px 100px;
+                grid-template-areas:
+                "html css js"
+                "php php php";
+                column-gap: 10px;
+                row-gap: 10px;
+            }
+            .html {
+                grid-area: html;
+                background: red;
+            }
+            .css {
+                grid-area: css;
+                background: yellow;
+            }
+            .js {
+                grid-area: js;
+                background: blue;
+            }
+            .php {
+                grid-area: php;
+                background: green;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="html">HTML</div>
+            <div class="css">CSS</div>
+            <div class="js">JS</div>
+            <div class="php">PHP</div>
+        </div>
+    </body>
+</html>
